@@ -1,0 +1,110 @@
+body {
+    height:100vh;
+    background: url(img.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* body {
+-ms-overflow-style: none;
+scrollbar-width: none;
+} */
+body::-webkit-scrollbar {
+ display: none;
+}
+
+.container #add-task-container {
+   width: 350px;
+   padding:20px 10px;
+   background-color: #fff;
+   border-radius: 20px;
+   box-shadow: 0 0 3px;
+   display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 5;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.container #add-task {
+    flex: 1;
+    transition: .3s;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #fff;
+    color:green;
+    border: green solid 2px;
+    border-radius: 10px;
+}
+
+.container #add-task:hover {
+    background-color: green;
+    color: #fff;
+}
+
+/* Tasks added dynamically via JS  */
+.task {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task li {
+    list-style-type: none;
+    flex: 4;
+    padding:1.3rem;
+    margin: 10px;
+}
+.task li::first-letter {
+    text-transform: uppercase;
+}
+
+.task button {
+    flex: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.task .checkTask {
+    transition: .5s;
+    color: orange;
+    margin-right: 5px;
+    border:2px solid orange;
+    font-size: 1.5rem;
+}
+
+.task .checkTask:hover {
+    background-color: orange;
+    color:#fff;
+}
+
+.task .delTask {
+    transition: .5s;
+    color: red;
+    margin-right: 5px;
+    border:2px solid red;
+    font-size: 1.5rem;
+}
+
+.task .delTask:hover {
+    background-color: red;
+    color:#fff;
+}
+
+.checked {
+    transition: .5s;
+    text-decoration: line-through;
+    color: rgb(255, 0, 247);
+}
